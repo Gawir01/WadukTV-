@@ -1,6 +1,10 @@
 name = "m3u-proxy"
-type = "javascript"
+main = "src/index.js"
+compatibility_date = "2025-05-17"
+usage_model = "unbound"
 
-account_id = "GANTI_DENGAN_ACCOUNT_ID_ANDA"
-workers_dev = true
-compatibility_date = "2024-05-14"
+[build]
+command = ""
+
+[vars]
+ORIGIN_URL = "https://balatack.my.id/temp54.m3u"
