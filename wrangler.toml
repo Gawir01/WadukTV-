@@ -1,8 +1,6 @@
-name = "cubmu-worker-proxy"
+name = "m3u-proxy"
 type = "javascript"
-account_id = ""
-workers_dev = true
-compatibility_date = "2024-05-01"
 
-[vars]
-PROXY_DOMAIN = "example.com"
+account_id = "GANTI_DENGAN_ACCOUNT_ID_ANDA"
+workers_dev = true
+compatibility_date = "2024-05-14"
