@@ -1,10 +1,12 @@
 name = "m3u-proxy"
-main = "src/index.js"
+type = "javascript"
+
+account_id = "Account ID: 1234567890abcdef1234567890abcdef"
+workers_dev = true
 compatibility_date = "2025-05-17"
-usage_model = "unbound"
 
 [build]
-command = ""
+upload.format = "modules"
 
-[vars]
-ORIGIN_URL = "https://balatack.my.id/temp54.m3u"
+[dev]
+port = 8787
