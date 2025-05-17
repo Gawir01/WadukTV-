@@ -1,21 +1,22 @@
 export default {
   async fetch(request) {
-    const playlistUrl = 'https://balatack.my.id/temp54.m3u';
+    const playlistUrl = 'https://balatack.my.id/temp54.m3u'; // Ganti dengan URL Anda
 
     const response = await fetch(playlistUrl, {
       headers: {
-        'User-Agent': request.headers.get('user-agent') || '',
-        'Referer': 'https://www.cubmu.com/',
-      },
+        'User-Agent': 'Mozilla/5.0',
+        'Referer': 'https://yourdomain.com'
+      }
     });
 
-    const contentType = response.headers.get('content-type') || 'application/octet-stream';
-    return new Response(await response.body, {
-      status: 200,
+    const content = await response.text();
+
+    return new Response(content, {
       headers: {
-        'Content-Type': contentType,
-        'Cache-Control': 'no-store',
-      },
+        'Content-Type': 'application/x-mpegURL',
+        'Access-Control-Allow-Origin': '*',
+        'Cache-Control': 'no-store'
+      }
     });
-  },
-};
+  }
+}
